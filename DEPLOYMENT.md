@@ -15,12 +15,23 @@ Reason: lowest operational burden, fastest path to public medical-research demo,
 
 ## DNS Configuration
 
-Pending confirmation from Fleda:
+Confirmed from Wix dashboard and DNS lookup on 2026-05-07:
 
-- DNS provider:
+- Wix site: `FledaPharmaceuticals`
+- Current primary domain: `fledausa.com`
+- Wix dashboard status: primary domain, managed by third party, connected by DNS
+- Authoritative nameservers: `ns6.wixdns.net`, `ns7.wixdns.net`
+- Current root domain A records resolve to Wix IPs
+- Current `www.fledausa.com` resolves through Wix CNAME infrastructure
+
+Recommended C3 demo DNS:
+
+- DNS provider: Wix DNS
 - Subdomain: `c3twin`
 - Record type: `CNAME`
-- Target: Streamlit app hostname, for example `your-app-name.streamlit.app`
+- Target: deployed Streamlit hostname, for example `your-app-name.streamlit.app`
+
+Do not change the existing root-domain or `www` Wix records for the main Fleda site.
 
 ## SSL
 
@@ -76,10 +87,14 @@ Minimum public-demo monitoring:
 
 ## Open Infrastructure Questions
 
-Before production deployment, confirm:
+Resolved:
 
-- What stack currently powers `fledausa.com`?
-- Is Cloudflare, nginx, or another reverse proxy already in front?
-- Is DNS managed through Cloudflare, Route53, the registrar, or another provider?
-- Is there an existing VPS/Docker host/Kubernetes cluster?
+- `fledausa.com` site management is in Wix.
+- DNS is managed by Wix nameservers, even though the domain registration itself is third-party.
+- The main Wix site should remain untouched.
+
+Still needed before production deployment:
+
 - Should the first public demo use Streamlit Community Cloud, Hugging Face Spaces, Render/Fly, or a Fleda-controlled VPS?
+- Which GitHub account or organization should own the standalone repository?
+- What exact deployed Streamlit hostname should the Wix DNS `c3twin` CNAME point to?
