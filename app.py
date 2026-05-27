@@ -72,6 +72,15 @@ def reset_to_healthy():
 st.set_page_config(page_title="C3 Digital Twin", page_icon="🧬",
                    layout="wide", initial_sidebar_state="expanded")
 
+st.markdown(
+    '<a href="https://www.fledausa.com/" target="_self" '
+    'style="display:inline-block;margin:0 0 16px 0;padding:8px 14px;'
+    'border:1px solid #242b3d;border-radius:999px;color:#e8ecf1;'
+    'text-decoration:none;background:#141824;font-size:0.85rem;">'
+    '&larr; Back to FPC Home</a>',
+    unsafe_allow_html=True,
+)
+
 CSS = """
 <style>
 :root{
