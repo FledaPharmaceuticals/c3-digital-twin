@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleda Digital Twin Platform</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #061226;
+      --ink: #f8fbff;
+      --muted: #b9c8e6;
+      --cyan: #5ee7ff;
+      --blue: #1ca7ff;
+      --violet: #b84dff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: #f6f9ff;
+      color: #0a1530;
+    }
+    .hero {
+      min-height: 720px;
+      padding: 34px 54px 84px;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(3, 10, 26, .98) 0%, rgba(3, 10, 26, .88) 35%, rgba(3, 10, 26, .2) 72%),
+        url("https://raw.githubusercontent.com/FledaPharmaceuticals/c3-digital-twin/main/docs/site-assets/fleda-digital-twin-hero.png") center right / cover no-repeat;
+    }
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--blue), var(--violet));
+    }
+    .brand small {
+      display: block;
+      margin-top: 2px;
+      color: #9db0d7;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+    .copy {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0;
+      max-width: 560px;
+      font-size: 62px;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .grad {
+      display: block;
+      background: linear-gradient(90deg, #2dbbff, #c756ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .rule {
+      width: 58px;
+      height: 3px;
+      margin: 30px 0;
+      background: linear-gradient(90deg, var(--blue), var(--violet));
+    }
+    .lead {
+      max-width: 450px;
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 25px;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--violet));
+      box-shadow: 0 18px 42px rgba(28, 167, 255, .25);
+    }
+    .capabilities {
+      padding: 54px 48px 66px;
+      text-align: center;
+      background: #f7fbff;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #126cff;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      color: #101b3a;
+    }
+    .sub {
+      margin: 0 auto 38px;
+      max-width: 680px;
+      color: #4b5d82;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    .grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .card {
+      min-height: 150px;
+      padding: 24px 18px;
+      border: 1px solid #dce8ff;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(19, 46, 112, .08);
+    }
+    .card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #101b3a;
+    }
+    .card p {
+      margin: 0;
+      color: #52668e;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="nav">
+      <div class="brand">
+        <div class="mark"></div>
+        <div>FLEDA<small>DIGITAL TWIN FOR LIFE</small></div>
+      </div>
+    </div>
+    <div class="copy">
+      <h1>Digital Twin <span class="grad">Revolutionizing Life Science</span></h1>
+      <div class="rule"></div>
+      <p class="lead">Fleda builds next-generation digital twin platforms that accelerate biomedical research, optimize production decisions, and bring scientific insight to life.</p>
+      <a class="cta" href="/solutions">Explore Solutions -></a>
+    </div>
+  </section>
+  <section class="capabilities">
+    <p class="eyebrow">Our Capabilities</p>
+    <h2>End-to-End Digital Twin Platform</h2>
+    <p class="sub">A high-technology foundation for modeling biology, formulations, clinical scenarios, and production workflows across life science programs.</p>
+    <div class="grid">
+      <div class="card"><strong>Data Integration</strong><p>Unify experimental, literature, and operational data into model-ready systems.</p></div>
+      <div class="card"><strong>Biological Modeling</strong><p>Simulate complex mechanisms, pathway responses, and biological scenarios.</p></div>
+      <div class="card"><strong>Simulation & Prediction</strong><p>Run controlled experiments in silico before costly real-world tests.</p></div>
+      <div class="card"><strong>AI Analytics</strong><p>Use intelligent modeling to identify patterns, risks, and optimization paths.</p></div>
+    </div>
+  </section>
+</body>
+</html>
